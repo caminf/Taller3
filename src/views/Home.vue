@@ -1,7 +1,11 @@
 <template>
-  <HelloWorld />
+  <main class="detailview-page">
+     <h1>Listado de noticias</h1>
+
+  </main>
 </template>
 
-<script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+<script>
 </script>
+
+<style></style>
