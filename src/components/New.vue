@@ -11,12 +11,13 @@
         </v-card-text>
 
         <v-card-actions>
-            <router-link to="/DetailedView">
-                a
+
+            <router-link :to="{ name: 'newsDetails', params: { newsId: props.id} }">
+                <v-btn color="orange-lighten-2" variant="elevated">
+                    Ver Noticia
+                </v-btn>
             </router-link>
-            <v-btn color="orange-lighten-2" variant="elevated">
-                Ver Noticia
-            </v-btn>
+
 
             <v-spacer></v-spacer>
 
@@ -28,7 +29,7 @@
                 <v-divider></v-divider>
 
                 <v-card-text>
-
+                    {{ props.id }}
 
                 </v-card-text>
             </div>
@@ -38,6 +39,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
 const show = ref(false)
 
 const props = defineProps({

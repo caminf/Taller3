@@ -6,7 +6,7 @@
     <div>
       <v-sheet class="d-flex flex-wrap" style="border: 1px solid red;">
 
-        <New v-for="new_ in news" :id="new_.id" :title="new_.title" :source="new_.source" :img-url="new_.imageUrl"></New>
+        <New v-for="new_ in news" :id="new_.newsId" :title="new_.title" :source="new_.source" :img-url="new_.imageUrl"></New>
 
 
       </v-sheet>
@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import New from '../components/New.vue'
 
 
@@ -25,8 +25,7 @@ const news = ref([]);
 
 const BASE_URL = "http://3.138.52.135:3000";
 
-
-async function getNews() {
+onMounted(async () => {
   try {
     const response = await axios.get(`${BASE_URL}/news`)
     news.value = response.data.news;
@@ -35,9 +34,11 @@ async function getNews() {
     console.log(err)
     console.log('ERROR')
   }
+});
 
-}
-getNews()
+
+
+
 async function getNewsByid(newsId) {
   try {
     const response = await axios.get(`${BASE_URL}/news/${newsId}`)

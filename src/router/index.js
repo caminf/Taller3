@@ -2,13 +2,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import Events from '../views/Events.vue'
-import DetailedView from '../views/DetailedView'
+import DetailedView from '../views/DetailedView.vue'
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/news',
       name: 'home',
       component: Home
     },
@@ -18,14 +19,10 @@ const router = createRouter({
       component: Events
     },
     {
-      path: '/events/:newsId',
-      name: 'eventsById',
-      component: Events
-    },
-    {
-      path: '/detailedview',
-      name: 'detailedview',
-      component: DetailedView
+      path: '/news/:newsId',
+      name: 'newsDetails',
+      component: DetailedView,
+      props: true
     },
   ]
 })
