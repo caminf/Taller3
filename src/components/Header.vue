@@ -6,7 +6,7 @@
           height="60px"></v-img>
       </v-col>
       <v-col cols="3" style="align-self: center;">
-        <router-link class="button" to="/">
+        <router-link class="button" to="/news">
           <v-btn class="" color="#ACD0FF" density="comfortable" variant="text">
             <h4>Noticias</h4>
           </v-btn>
