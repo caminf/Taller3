@@ -1,11 +1,57 @@
 <template>
   <main class="detailview-page">
-     <h1>Listado de noticias</h1>
+    <div class="pa-5">
+      <h1>Listado de noticias</h1>
+    </div>
+    <div>
+      <v-sheet class="d-flex flex-wrap" style="border: 1px solid red;">
+
+        <New v-for="new_ in news" :id="new_.id" :title="new_.title" :source="new_.source" :img-url="new_.imageUrl"></New>
+
+
+      </v-sheet>
+    </div>
 
   </main>
 </template>
 
-<script>
+<script setup>
+import { ref } from 'vue';
+import New from '../components/New.vue'
+
+
+import axios from 'axios';
+const news = ref([]);
+
+const BASE_URL = "http://3.138.52.135:3000";
+
+
+async function getNews() {
+  try {
+    const response = await axios.get(`${BASE_URL}/news`)
+    news.value = response.data.news;
+    console.log(response.data);
+  } catch (err) {
+    console.log(err)
+    console.log('ERROR')
+  }
+
+}
+getNews()
+async function getNewsByid(newsId) {
+  try {
+    const response = await axios.get(`${BASE_URL}/news/${newsId}`)
+    news.value = response.data.news;
+    console.log(news);
+  } catch (err) {
+    console.log(err)
+    console.log('ERROR')
+  }
+
+}
 </script>
 
-<style></style>
+<style> .red-border {
+   border: 1px solid red;
+ }
+</style>
