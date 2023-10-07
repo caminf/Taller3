@@ -2,6 +2,10 @@
 Integrantes:
   - Camila Infante 
   - Carlos Peña
+
+```
+montado en: localhost:3000/news
+```
     
 ## Dependencias utilizadas
 
