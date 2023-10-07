@@ -2,8 +2,8 @@
     <main class="events-page">
         <h1 style="margin-left: 12px;">Eventos</h1>
         <v-sheet class="d-flex flex-wrap ma-2">
-            <Event v-for="event_ in events" :id="event_.id" :title="event_.title" :source="event_.source"
-                :img-url="event_.imageUrl" :day="event_.day" :month="event_.month" :year="event_.year"></Event>
+            <Event v-for="event_ in events" :id="event_.eventId" :title="event_.title" :source="event_.source"
+                :day="event_.day" :month="event_.month" :year="event_.year"></Event>
         </v-sheet>
     </main>
 </template>
