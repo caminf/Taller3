@@ -1,70 +1,26 @@
-# base
-
-## Project setup
-
-```
-# yarn
-yarn
-
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# pnpm
-bun install
-```
-
-### Compiles and hot-reloads for development
+# Taller 3: Ufro News
+Integrantes:
+  - Camila Infante 
+  - Carlos Peña
+    
+## Dependencias utilizadas
 
 ```
-# yarn
-yarn dev
-
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# bun
-bun run dev
+- vite
+- vuetify
+- axios
+- vue-router
 ```
 
-### Compiles and minifies for production
+## Colores utilizados
 
 ```
-# yarn
-yarn build
-
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# bun
-bun run build
+--primary: #0060DF;
+--primary-alt: #ACD0FF;
+--light-grey: #EDEDF1;
+--dark: #003EAA;
+--dark-alt: #FFC436;
+--light: #F1F5F9;
+--light-alt: #F8E3E3;
 ```
-
-### Lints and fixes files
-
-```
-# yarn
-yarn lint
-
-# npm
-npm run lint
-
-# pnpm
-pnpm lint
-
-# bun
-bun run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://vitejs.dev/config/).
 
